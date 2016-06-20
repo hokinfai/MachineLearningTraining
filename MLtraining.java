@@ -80,9 +80,9 @@ public class MLtraining {
 			int lineBegin = Integer.parseInt(spiltLine[0]);
 			System.out.println(tsvBegin);
 			System.out.println(lineBegin);
-			if ((tsvBegin - lineBegin < 3 || lineBegin - tsvBegin < 3) && spilTsv[2].equals(spiltLine[2])) {
+			if ((tsvBegin - lineBegin < 3 || lineBegin - tsvBegin < 3) && spilTsv[2].trim().equals(spiltLine[2].trim())) {
 				System.out.println(spilTsv[3] + "\t" + tsvlist.get(index));
-				ans.append(spilTsv[3] + "\t" + tsvlist.get(index) + "\n");
+				ans.append(spilTsv[3] + "\t" + line + "\n");
 				index++;
 			} else {
 				System.out.println("O\t" + line);
